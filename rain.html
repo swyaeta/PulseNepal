@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>High Rainfall</title>
+    <link rel="stylesheet" href="rain.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Lora:wght@500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <a href="main.html" class="goback">Go Back ← </a>
+
+    <header>
+        <h1>High Rainfall</h1>
+        <h3>(भारी वर्षा)</h3>
+        <p>Weather across all the 77 districts of Nepal</p>
+    </header>
+
+    <main>
+
+        <h2>District Rainfall</h2>
+        <p id="update">Loading rainfall in mm...</p>
+
+        <button id="refresh">Update ↻</button>
+
+        <input type="text" id="search"
+        placeholder="Search a district...">
+
+        <p>Ranked by the latest data:</p>
+
+        <div id="districts">
+            Loading districts...
+        </div>
+
+        <p class="credit">This weather data is loaded from Open-Meteo</p>
+
+    </main>
+
+    <script src="rain.js"></script>
+
+</body>
+</html>

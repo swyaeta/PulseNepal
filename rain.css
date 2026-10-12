@@ -1,0 +1,116 @@
+
+body {
+    background-color: #F4F0E6;
+    color: #20352a;
+    font-family: 'DM ', sans-serif;
+    margin: 0;
+}
+p{
+    color: #7e612d;
+}
+header {
+    text-align: center;
+    padding: 100px 20px 30px;
+}
+
+h1{
+    color:#364f42;
+    font-size: 50px;
+    margin-top:140px;
+
+}
+h2{
+    color:#cb9744;
+    font-size:30px;
+    margin-top:-24px
+}
+
+h3{
+    color:#cb9744;
+    font-size:30px;
+    margin-top:-24px
+
+
+}
+.goback {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    background-color: #7e612d;
+    color: #E5E0D2;
+    padding: 12px;
+    border-radius: 20px;
+    text-decoration: none;
+    width:90px;
+    height:30px;
+    font-size:17px
+}
+
+main {
+    width: 850px;
+    margin: auto;
+    padding: 20px;
+}
+
+button {
+    background-color: #364f42;
+    color: white;
+    border: none;
+    padding: 12px 18px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#search {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 15px;
+    margin: 20px 0;
+    border: 1px solid #D8DDCB;
+    border-radius: 12px;
+    font-size: 15px;
+}
+
+.district {
+    background-color: #FFFCF5;
+    padding: 17px;
+    margin-bottom: 12px;
+    border: 1px solid #D8DDCB;
+    border-radius: 14px;
+}
+
+.districttop {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.districtname {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.weather {
+    color: #647466;
+    font-size: 13px;
+    margin-top: 6px;
+}
+
+.rainval {
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.credit {
+    color: #647466;
+    font-size: 12px;
+    text-align: center;
+    margin-top: 30px;
+}
+
+@media (max-width: 500px) {
+    h1 {
+        font-size: 34px;
+    }
+}

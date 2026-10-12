@@ -3,6 +3,8 @@ body{
     text-align: center;
     font-family:'Lora', serif;
 }
+
+
 h1{
     color:#364f42;
     font-size: 70px;
@@ -18,24 +20,44 @@ p{
 img{
     width:750px;
     height:420px;
+    margin-top:40px
+}
+
+h3{
+    font-family: cursive;
+    font-size:15px;
+    color: #9a6f1a;
+    margin-top:-10px
+
+}
+
+h2{
+    font-family: cursive;
+    font-size:25px;
+    color:#456353;
     margin-top:100px
 }
 
 .mboard{
-    width:500px;
+    width:700px;
     height:60px;
-    background-color: #364f42;
+    background-color: #456353;
     position:absolute;
     top:10%;
-    left:20%;
+    left:14%;
     border-radius: 28px;
     align-items: center;
     justify-content: center;
     display:flex;
 }
+
+
 .mboard button {
     margin:20px;
-    width:90px;
+    width:190px;
     height:40px;
     background-color: bisque;
+    cursor:pointer;
+    font-size:15px;
+    border-radius: 15px;
 }
