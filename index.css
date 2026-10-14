@@ -1,0 +1,70 @@
+
+/* this is for the main body of the page*/
+body{
+    background-color:#F4F0E6;
+    text-align: center;
+    font-family:'Lora', serif;
+}
+
+/* this is the headinng*/
+h1{
+    color:#364f42;
+    font-size: 70px;
+    margin-top:250px
+}
+
+/* this is for the small line in the top*/
+p{
+    color:#21332a;
+    font-size:17px;
+    margin-top:-25px;
+}
+
+/* this is the map of nepal*/
+img{
+    width:750px;
+    height:420px;
+    margin-top:40px
+}
+
+/* this is for the title in nepali*/
+h3{
+    font-family: cursive;
+    font-size:15px;
+    color: #9a6f1a;
+    margin-top:-10px
+
+}
+
+/* this for the heading of the intro */
+h2{
+    font-family: cursive;
+    font-size:25px;
+    color:#456353;
+    margin-top:100px
+}
+
+/* this is board that holds all the options*/
+.mboard{
+    width:700px;
+    height:60px;
+    background-color: #456353;
+    position:absolute;
+    top:10%;
+    left:14%;
+    border-radius: 28px;
+    align-items: center;
+    justify-content: center;
+    display:flex;
+}
+
+/* this is the button inside the board*/
+.mboard button {
+    margin:20px;
+    width:190px;
+    height:40px;
+    background-color: bisque;
+    cursor:pointer;
+    font-size:15px;
+    border-radius: 15px;
+}
