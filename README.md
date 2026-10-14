@@ -3,7 +3,7 @@
 **77 districts. One country. One heartbeat.**
 
 ##  Live at
-(https://swyaeta.github.io/Pulse-Nepal/)
+https://swyaeta.github.io/PulseNepal/
 
 ## About
 
