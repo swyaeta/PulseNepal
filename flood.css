@@ -9,15 +9,16 @@ h1{
     font-size: 50px;
     margin-top:70px;
 }
-h2{
+
+h3{
     color:#cb9744;
     font-size:30px;
-    margin-top:-24px
+    margin-top:-24px;
 }
 
 p{
     font-size:17px;
-    color:#7e612d
+    color:#7e612d;
 }
 
 .goback{
@@ -31,18 +32,20 @@ p{
     border-radius: 20px;
     position: absolute;
     top:25px;
-    left:25px
+    left:25px;
 }
 
 header{
     text-align:center;
-    padding:100px 20px 30px
+    padding:100px 20px 30px;
 }
 
 main{
-    width:850px;
+    max-width:850px;
+    width:100%;
+    box-sizing:border-box;
     margin:auto;
-    padding:20px
+    padding:20px;
 }
 
 button{
@@ -51,10 +54,7 @@ button{
     border:none;
     padding:12px 18px;
     border-radius:10px;
-    cursor:pointer
-
-
-
+    cursor:pointer;
 }
 
 #search{
@@ -64,47 +64,96 @@ button{
     margin:20px 0;
     border:1px solid #D8DDCB;
     border-radius: 12px;
-    font-size: 15px
-
-}
-
-.district{
-    background-color: #FFFCF5;
-    padding:17px;
-    margin-bottom:12px;
-    border-radius:14px;
-    border:1px solid #D8DDCB;
-
-
-}
-.districttop{
-    display: flex;
-    justify-content: space-between;
-    justify-content:space-between;
-    gap:10px
-
-}
-
-.districtname{
-    font-size:16px
-}
-
-.floodprone{
-    color:#7e612d
-
-}
-
-.credit{
-    font-size:12px;
-    color:#7e612d;
-    margin: top 30px
-
-
+    font-size: 15px;
 }
 
 #refresh{
     display:block;
     margin: 0 0 20px 0;
+}
 
-    
+.credit{
+    font-size:12px;
+    color:#7e612d;
+    margin-top:30px;
+}
+
+.weather{
+    font-size:14px;
+    color:#7e612d;
+    margin-top:6px;
+}
+
+.district{
+    background-color: #FFFCF5;
+    padding:30px 28px;
+    margin-bottom:20px;
+    border-radius:16px;
+    border:1px solid #D8DDCB;
+    text-align:left;
+    box-shadow:0 2px 8px rgba(54, 79, 66, 0.08);
+}
+
+.districttop{
+    display:flex;
+    justify-content:space-between;
+    align-items:baseline;
+    gap:10px;
+}
+
+.districtname{
+    font-size:28px;
+    font-weight:700;
+    color:#364f42;
+}
+
+.reportdate{
+    font-size:14px;
+    color:#7e612d;
+}
+
+.place{
+    font-size:17px;
+    color:#cb9744;
+    margin-top:6px;
+    padding-bottom:16px;
+    border-bottom:1px solid #D8DDCB;
+}
+
+.stats{
+    margin-top:12px;
+}
+
+.stat{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:12px 0;
+    border-bottom:1px solid #EFEBDD;
+}
+
+.stat:last-child{
+    border-bottom:none;
+}
+
+.statlabel{
+    font-size:17px;
+    color:#7e612d;
+}
+
+.statvalue{
+    font-size:26px;
+    font-weight:700;
+}
+
+.deaths{
+    color:#9b3d2e;
+}
+
+.injured{
+    color:#cb9744;
+}
+
+.houses{
+    color:#364f42;
 }

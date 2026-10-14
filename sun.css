@@ -1,9 +1,12 @@
+
+/* this for the body of the page*/
 body{
     background-color:#F4F0E6;
     text-align: center;
     font-family:'Lora', serif;
 }
 
+/* this is for the title of the page*/
 h1{
     color:#364f42;
     font-size: 50px;
@@ -11,26 +14,21 @@ h1{
 
 }
 
-h2{
-    color:#cb9744;
-    font-size:30px;
-    margin-top:-24px
-}
-
-
+/* this is for the little description typa in the page*/
 p{
     font-size:17px;
     color:#7e612d;
 
 }
 
+/* this for the nepali heading*/
 h3{
     color:#cb9744;
     font-size:30px;
     margin-top:-24px
 }
 
-
+/* this is to go back to the main page*/
 .goback{
     width:90px;
     height:30px;
@@ -45,21 +43,21 @@ h3{
     left:25px
 }
 
-
+/* this is for the header section of the top divided in html*/
 header{
     text-align: center;
     padding: 100px 20px 30px
 
 }
 
-
+/* this is for the main body section*/
 main{
     width:850px;
     margin:auto;
     padding:20px
 }
 
-
+/* this is the button in the page*/
 button{
     background-color: #364f42;
     color: white;
@@ -69,7 +67,7 @@ button{
     cursor: pointer
 }
 
-
+/* this is to search in the bar*/
 #search{
     width:100%;
     box-sizing: border-box;
@@ -80,7 +78,7 @@ button{
     font-size: 15px
 }
 
-
+/* this is to  show the districts wil show*/
 .district {
     background-color: #FFFCF5;
     padding: 17px;
@@ -92,7 +90,7 @@ button{
 }
 
 
-
+/* this is to highlight a district*/
 .districtop{
     display:flex;
     justify-content: space-between;
@@ -101,24 +99,25 @@ button{
 
 }
 
-
+/* to style the district name*/
 .districtname{
     font-size:16px;
 
 }
 
-
+/* it styles the value of the temp of each district*/
 .temperature{
     color:#7e612d
 }
 
+/* this is to style and give credits to the open-meteo*/
 .credit{
     font-size:12px;
     color:#7e612d;
     margin-top:30px
 }
 
-
+/* this is style the refresh button*/
 #refresh {
     display: block;
     margin: 0 0 20px 0;

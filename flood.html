@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Flood prone district</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Flood reports</title>
         <link rel="stylesheet" href="flood.css">
         <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Lora:wght@500;600;700&display=swap" rel="stylesheet">
     </head>
@@ -10,27 +12,23 @@
         <a href="main.html" class="goback">Go Back ←</a>
 
         <header>
-         <h1>Flood Prone</h1>
-         <h3>बाढीको जोखिम</h3>
-         <p>All across all 77 districts of Nepal </p>
+         <h1>Flood Reports</h1>
+         <h3>बाढी प्रतिवेदन</h3>
+         <p>Latest flood reports across Nepal in the past 6 months</p>
         </header>
 
         <main>
-            <p id="update">Loading the calculation in percentage...</p>
+            <p id="update">Loading flood reports...</p>
             <button id="refresh">Update ↻</button>
             <input type="text" id="search"
-            placeholder="Search a district..">
-
-            <p>Ranked by highest % of chances of flood</p>
+            placeholder="Search a place or district..">
 
             <div id="districts">
-                Loading districts...
+                Loading reports...
             </div>
 
-            <p class="credit">Weather data from Open-Meteo</p>
+            <p class="credit">Reports from BIPAD Portal (NDRRMA). May not include every incident.</p>
         </main>
-
-
 
     <script src="flood.js"></script>
     </body>

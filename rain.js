@@ -86,8 +86,10 @@ function showDistricts() {
     }
 }
 
+
 search.addEventListener("input", showDistricts);
 refresh.addEventListener("click", loadWeather);
+
 
 loadWeather();
 setInterval(loadWeather, 60000);

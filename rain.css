@@ -1,18 +1,23 @@
-
+/* this is to style the bg of the page*/
 body {
     background-color: #F4F0E6;
     color: #20352a;
     font-family: 'DM ', sans-serif;
     margin: 0;
 }
+
+/* this is for the lil description*/
 p{
     color: #7e612d;
 }
+
+/* this is to style the header section of the html*/
 header {
     text-align: center;
     padding: 100px 20px 30px;
 }
 
+/* this is for the heading*/
 h1{
     color:#364f42;
     font-size: 50px;
@@ -20,13 +25,7 @@ h1{
 
 }
 
-
-h2{
-    color:#cb9744;
-    font-size:30px;
-    margin-top:-24px
-}
-
+/* this is for the nepali heading of the page*/
 h3{
     color:#cb9744;
     font-size:30px;
@@ -34,6 +33,7 @@ h3{
 
 
 }
+/* this is for the go back link styling*/
 .goback {
     position: absolute;
     top: 25px;
@@ -48,12 +48,14 @@ h3{
     font-size:17px
 }
 
+/* this is to style the main section*/
 main {
     width: 850px;
     margin: auto;
     padding: 20px;
 }
 
+/* this is for the buttons styling in the page*/
 button {
     background-color: #364f42;
     color: white;
@@ -63,6 +65,7 @@ button {
     cursor: pointer;
 }
 
+/* this is to style the search bar*/
 #search {
     width: 100%;
     box-sizing: border-box;
@@ -73,6 +76,7 @@ button {
     font-size: 15px;
 }
 
+/* this is to style each districts*/
 .district {
     background-color: #FFFCF5;
     padding: 17px;
@@ -81,6 +85,7 @@ button {
     border-radius: 14px
 }
 
+/* this is to show the highlighted distrixt*/
 .districttop {
     display: flex;
     justify-content: space-between;
@@ -88,22 +93,28 @@ button {
     gap: 10px;
 }
 
+/* this is to style like name of the district:"lamjung or gorkha" blah */
 .districtname {
     font-size: 16px;
 
 }
 
+/* it styles the weather info in the page*/
 .weather {
     color: #647466;
     font-size: 13px;
     margin-top: 6px;
 }
 
+
+/* to style the value of rainfall*/
 .rainval {
     font-weight: bold;
     white-space: nowrap;
 }
 
+
+/* this is to give credits to the Open-meteo*/
 .credit {
     color: #647466;
     font-size: 12px;
