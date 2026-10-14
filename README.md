@@ -25,8 +25,20 @@
 #### top:<img width="1803" height="827" alt="Screenshot (1581)" src="https://github.com/user-attachments/assets/14b32399-320f-499e-ba47-f73f225fbf1c" />
 #### bottom:<img width="1752" height="830" alt="Screenshot (1582)" src="https://github.com/user-attachments/assets/23871c07-90b9-4251-9be5-2974bc02dea6" />
 
+### temperature page:
+#### top:<img width="1795" height="843" alt="Screenshot (1583)" src="https://github.com/user-attachments/assets/2bd1ab1d-5b6b-4949-a387-2dba2d7fd77d" />
 
 
+#### bottom:<img width="1751" height="822" alt="Screenshot (1584)" src="https://github.com/user-attachments/assets/acb1f354-7ce5-456e-b975-af5195c381d5" />
+
+#### flood reports:
+
+top:<img width="1771" height="864" alt="Screenshot (1586)" src="https://github.com/user-attachments/assets/cbc09378-dca1-4be5-8344-071481be0e2b" />
+
+bottom:<img width="1797" height="832" alt="Screenshot (1587)" src="https://github.com/user-attachments/assets/9378f496-73e4-4f85-99d5-aeaa77bf8d81" />
+
+
+## So yea each page has goback link and update button and search bar n all
 ## Built With
 
 - HTML
