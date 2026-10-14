@@ -7,75 +7,82 @@ const refresh = document.getElementById("refresh");
 let districts = [];
 
 async function getData(url) {
-    const controller = new AbortController();
-    const timer = setTimeout(() => controller.abort(), 15000);
+    const response = await fetch(url);
 
-    try {
-        const response = await fetch(url, {
-            signal: controller.signal
-        });
-
-        if (!response.ok) {
-            throw new Error("Request failed: " + response.status);
-        }
-
-        return await response.json();
-    } finally {
-        clearTimeout(timer);
+    if (!response.ok) {
+        throw new Error("Request failed: " + response.status);
     }
+
+    return await response.json();
 }
 
 async function loadTemperature() {
     refresh.disabled = true;
     refresh.textContent = "Updating...";
-    update.textContent = "Loading district names...";
+    update.textContent = "Loading temperatures...";
 
     try {
         const places = await getData(
             "https://raw.githubusercontent.com/open-admin-data/nepal-administrative-divisions/main/data/all-district.json"
         );
 
-        update.textContent = "Getting temperatures...";
+        districts = [];
 
-        const lat = places.map(d => Number(d.geo.lat));
-        const lon = places.map(d => Number(d.geo.lon));
+        for (let i = 0; i < places.length; i += 10) {
+            const batch = places.slice(i, i + 10);
 
-        const url = "https://api.open-meteo.com/v1/forecast?latitude="
-            + lat.join(",")
-            + "&longitude=" + lon.join(",")
-            + "&current=temperature_2m"
-            + "&timezone=Asia%2FKathmandu";
+            const lat = batch.map(d => Number(d.geo.lat));
+            const lon = batch.map(d => Number(d.geo.lon));
 
+            const url =
+                "https://api.open-meteo.com/v1/forecast?latitude=" +
+                lat.join(",") +
+                "&longitude=" +
+                lon.join(",") +
+                "&current=temperature_2m" +
+                "&timezone=Asia%2FKathmandu";
 
-            
-        let data = await getData(url);
+            let data = await getData(url);
 
-        if (!Array.isArray(data)) {
-            data = [data];
+            if (!Array.isArray(data)) {
+                data = [data];
+            }
+
+            batch.forEach((place, index) => {
+                const weather = data[index];
+
+                if (weather?.current?.temperature_2m == null) {
+                    console.log("Missing weather:", place.name.en);
+                    return;
+                }
+
+                districts.push({
+                    name: place.name.en,
+                    temperature: weather.current.temperature_2m,
+                    time: weather.current.time,
+                    latitude: weather.latitude,
+                    longitude: weather.longitude
+                });
+            });
         }
 
-        districts = places.map((d, i) => ({
-            name: d.name.en,
-            temperature: data[i]?.current?.temperature_2m
-        })).filter(d => d.temperature !== undefined);
+        districts.sort(
+            (a, b) => b.temperature - a.temperature
+        );
 
-
-      console.log(
-      districts.find(d => d.name.toLowerCase() === "gorkha")
-       );
-
-        districts.sort((a, b) => b.temperature - a.temperature);
+        // Debug: inspect temperatures, coordinates and timestamps
+        console.table(districts);
 
         showDistricts();
 
-        update.textContent = "Do you wanna update?";
+        update.textContent =
+            "Updated weather for " + districts.length + " districts.";
 
     } catch (error) {
-        console.log(error);
+        console.error("Temperature error:", error);
 
-        update.textContent = error.name === "AbortError"
-            ? "Request timed out. Check your internet."
-            : "Temperature data could not load. Try again.";
+        update.textContent =
+            "Weather could not load. Please try again.";
 
     } finally {
         refresh.disabled = false;
@@ -96,27 +103,31 @@ function showDistricts() {
         const card = document.createElement("div");
         card.className = "district";
 
-        card.innerHTML = `
-            <div class="districtop">
-                <div class="districtname">
-                    #${districts.indexOf(d) + 1} · ${d.name}
-                </div>
-                <div class="temperature">
-                    ${d.temperature}°C
-                </div>
-            </div>
-        `;
+        const name = document.createElement("div");
+        name.className = "districtname";
+        name.textContent =
+            "#" + (districts.indexOf(d) + 1) + " · " + d.name;
 
+        const temperature = document.createElement("div");
+        temperature.className = "temperature";
+        temperature.textContent =
+            d.temperature.toFixed(1) + "°C";
+
+        const row = document.createElement("div");
+        row.className = "districtop";
+
+        row.appendChild(name);
+        row.appendChild(temperature);
+        card.appendChild(row);
         districtBox.appendChild(card);
     });
 
     if (found.length === 0) {
         districtBox.textContent = districts.length === 0
             ? "Waiting for weather data..."
-            : "This district doesnot exist, please check your spelling!!";
+            : "This district doesnot exist, please check your spelling";
     }
 }
-
 
 search.addEventListener("input", showDistricts);
 refresh.addEventListener("click", loadTemperature);

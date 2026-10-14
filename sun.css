@@ -52,9 +52,11 @@ header{
 
 /* this is for the main body section*/
 main{
-    width:850px;
+    max-width:850px;
+    width:100%;
+    box-sizing:border-box;
     margin:auto;
-    padding:20px
+    padding:20px;
 }
 
 /* this is the button in the page*/
