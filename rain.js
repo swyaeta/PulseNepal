@@ -82,10 +82,9 @@ function showDistricts() {
     });
 
     if (found.length === 0) {
-        districtBox.textContent = "District not found. Check your spelling.";
+        districtBox.textContent = "This district doesnot exist, please check your spelling!!";
     }
 }
-
 
 search.addEventListener("input", showDistricts);
 refresh.addEventListener("click", loadWeather);

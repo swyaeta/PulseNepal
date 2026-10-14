@@ -179,7 +179,7 @@ function showReports() {
     });
 
     if (found.length === 0) {
-        districtBox.textContent = "No flood reports found. Check your spelling.";
+        districtBox.textContent = "No flood reports found. Check your spelling!!";
     }
 }
 

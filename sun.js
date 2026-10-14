@@ -46,6 +46,8 @@ async function loadTemperature() {
             + "&current=temperature_2m"
             + "&timezone=Asia%2FKathmandu";
 
+
+            
         let data = await getData(url);
 
         if (!Array.isArray(data)) {
@@ -56,6 +58,11 @@ async function loadTemperature() {
             name: d.name.en,
             temperature: data[i]?.current?.temperature_2m
         })).filter(d => d.temperature !== undefined);
+
+
+      console.log(
+      districts.find(d => d.name.toLowerCase() === "gorkha")
+       );
 
         districts.sort((a, b) => b.temperature - a.temperature);
 
@@ -106,9 +113,10 @@ function showDistricts() {
     if (found.length === 0) {
         districtBox.textContent = districts.length === 0
             ? "Waiting for weather data..."
-            : "District not found. Check your spelling.";
+            : "This district doesnot exist, please check your spelling!!";
     }
 }
+
 
 search.addEventListener("input", showDistricts);
 refresh.addEventListener("click", loadTemperature);

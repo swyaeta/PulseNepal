@@ -1,26 +1,33 @@
+
+
+/* this is to style the main bg of the page*/
 body{
     background-color:#F4F0E6;
     text-align: center;
     font-family:'Lora', serif;
 }
 
+/* this is the heading of the page*/
 h1{
     color:#364f42;
     font-size: 50px;
     margin-top:70px;
 }
 
+/* this is for the nepali heading styling*/
 h3{
     color:#cb9744;
     font-size:30px;
     margin-top:-24px;
 }
 
+/* this is for the short despriction styling*/
 p{
     font-size:17px;
     color:#7e612d;
 }
 
+/* this is for the link to go to main page*/
 .goback{
     width:90px;
     height:30px;
@@ -35,11 +42,13 @@ p{
     left:25px;
 }
 
+/* this is to style the header section*/
 header{
     text-align:center;
     padding:100px 20px 30px;
 }
 
+/* this is to style the main section */
 main{
     max-width:850px;
     width:100%;
@@ -48,6 +57,7 @@ main{
     padding:20px;
 }
 
+/* this for the buttons in the page styling*/
 button{
     background-color: #364f42;
     color:white;
@@ -57,6 +67,7 @@ button{
     cursor:pointer;
 }
 
+/* this is for the search box*/
 #search{
     width:100%;
     box-sizing:border-box;
@@ -67,6 +78,7 @@ button{
     font-size: 15px;
 }
 
+/* this is for the txt while updating*/
 #refresh{
     display:block;
     margin: 0 0 20px 0;
@@ -78,12 +90,14 @@ button{
     margin-top:30px;
 }
 
+/* this styles the weather info in the page*/
 .weather{
     font-size:14px;
     color:#7e612d;
     margin-top:6px;
 }
 
+/* this is to style each districts*/
 .district{
     background-color: #FFFCF5;
     padding:30px 28px;
@@ -94,6 +108,7 @@ button{
     box-shadow:0 2px 8px rgba(54, 79, 66, 0.08);
 }
 
+/* this is to show the highlighted district*/
 .districttop{
     display:flex;
     justify-content:space-between;
@@ -101,17 +116,20 @@ button{
     gap:10px;
 }
 
+/* this is to style the name of the district */
 .districtname{
     font-size:28px;
     font-weight:700;
     color:#364f42;
 }
 
+/* to style the date of the reposrt*/
 .reportdate{
     font-size:14px;
     color:#7e612d;
 }
 
+/* to style the place of the flooding*/
 .place{
     font-size:17px;
     color:#cb9744;
@@ -120,32 +138,45 @@ button{
     border-bottom:1px solid #D8DDCB;
 }
 
+/* to style the container of the statistics*/
 .stats{
     margin-top:12px;
 }
 
+/* this to style indiviual of the statistic*/
 .stat{
     display:flex;
     justify-content:space-between;
     align-items:center;
     padding:12px 0;
-    border-bottom:1px solid #EFEBDD;
+    border-bottom:1px solid #EFEBDD
+
+
 }
 
+/* to style the last child of the parent*/
 .stat:last-child{
-    border-bottom:none;
+    border-bottom:none
 }
+
+
+/* this styles the name of the statistics*/
 
 .statlabel{
     font-size:17px;
-    color:#7e612d;
+    color:#7e612d
+
 }
 
+
+/* this is styles of the value of statistics*/
 .statvalue{
     font-size:26px;
-    font-weight:700;
+    font-weight:700
 }
 
+
+/* for the affected people no.s styling*/
 .deaths{
     color:#9b3d2e;
 }
@@ -154,6 +185,7 @@ button{
     color:#cb9744;
 }
 
+/* to style no of houses affected in the flood*/
 .houses{
     color:#364f42;
 }
