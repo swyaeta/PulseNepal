@@ -1,4 +1,3 @@
-
 const districtBox = document.getElementById("districts");
 const search = document.getElementById("search");
 const update = document.getElementById("update");
@@ -10,21 +9,18 @@ async function loadWeather() {
     try {
         update.textContent = "Loading weather...";
 
-        // getting district name and all
         let response = await fetch(
             "https://raw.githubusercontent.com/open-admin-data/nepal-administrative-divisions/main/data/all-district.json"
         );
-
         let places = await response.json();
 
-        // getting the weather from every district
         let lat = places.map(d => Number(d.geo.lat));
         let lon = places.map(d => Number(d.geo.lon));
 
         let url = "https://api.open-meteo.com/v1/forecast?latitude="
             + lat.join(",")
             + "&longitude=" + lon.join(",")
-            + "&current=temperature_2m,precipitation"
+            + "&current=precipitation"
             + "&timezone=Asia%2FKathmandu";
 
         let weather = await fetch(url);
@@ -34,19 +30,16 @@ async function loadWeather() {
             data = [data];
         }
 
-        // this save the rainfall readings
         districts = places.map((d, i) => ({
             name: d.name.en,
-            temperature: data[i].current.temperature_2m,
             rainfall: data[i].current.precipitation
         }));
 
-        // This puts the highest rainfall at the top
         districts.sort((a, b) => b.rainfall - a.rainfall);
 
         showDistricts();
 
-        update.textContent = "Weather data from Open-Meteo";
+        update.textContent = "Do you wanna update?";
 
     } catch (error) {
         update.textContent = "Weather could not load.";
@@ -76,7 +69,6 @@ function showDistricts() {
 
                     <div class="weather">
                         Rainfall: ${d.rainfall > 0.1 ? "Yes" : "No"}
-                        · ${d.temperature}°C
                     </div>
                 </div>
 
@@ -90,7 +82,7 @@ function showDistricts() {
     });
 
     if (found.length === 0) {
-        districtBox.textContent = "Such district doesnot exist or you typed wrong";
+        districtBox.textContent = "District not found. Check your spelling.";
     }
 }
 

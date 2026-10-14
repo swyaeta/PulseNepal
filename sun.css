@@ -7,7 +7,7 @@ body{
 h1{
     color:#364f42;
     font-size: 50px;
-    margin-top:140px;
+    margin-top:70px;
 
 }
 
@@ -45,11 +45,13 @@ h3{
     left:25px
 }
 
+
 header{
     text-align: center;
-    padding: 100px 20px 30px;
+    padding: 100px 20px 30px
 
 }
+
 
 main{
     width:850px;
@@ -57,12 +59,68 @@ main{
     padding:20px
 }
 
-#button{
+
+button{
     background-color: #364f42;
     color: white;
     border: none;
     padding: 12px 18px;
     border-radius: 10px;
     cursor: pointer
+}
+
+
+#search{
+    width:100%;
+    box-sizing: border-box;
+    padding: 15px;
+    margin: 20px 0;
+    border: 1px solid #D8DDCB;
+    border-radius: 12px;
+    font-size: 15px
+}
+
+
+.district {
+    background-color: #FFFCF5;
+    padding: 17px;
+    margin-bottom: 12px;
+    border-radius: 14px;
+    border: 1px solid #D8DDCB
+
+    
+}
+
+
+
+.districtop{
+    display:flex;
+    justify-content: space-between;
+    align-items:center;
+    gap:10px
+
+}
+
+
+.districtname{
+    font-size:16px;
+
+}
+
+
+.temperature{
+    color:#7e612d
+}
+
+.credit{
+    font-size:12px;
+    color:#7e612d;
+    margin-top:30px
+}
+
+
+#refresh {
+    display: block;
+    margin: 0 0 20px 0;
 }
 
