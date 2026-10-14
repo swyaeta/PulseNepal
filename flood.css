@@ -85,3 +85,26 @@ button{
 
 }
 
+.districtname{
+    font-size:16px
+}
+
+.floodprone{
+    color:#7e612d
+
+}
+
+.credit{
+    font-size:12px;
+    color:#7e612d;
+    margin: top 30px
+
+
+}
+
+#refresh{
+    display:block;
+    margin: 0 0 20px 0;
+
+    
+}
